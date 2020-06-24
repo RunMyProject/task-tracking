@@ -1,0 +1,41 @@
+<div>
+    <label>name of task:
+      <input id="taskInput" [(ngModel)]="apiData.task" placeholder="insert task name"/>
+    </label>
+    <label>day start:
+      <input id="dayStart" [(ngModel)]="apiData.dayStart" placeholder="insert day start"
+             type="number" 
+             oninput="
+              if(value > 6) {
+                alert('Day exceeds day n. 6'); 
+                value=6
+              }
+              if(value < 0) {
+                alert('Day can\'t be < 0!'); 
+                value=0
+              }
+              if(document.getElementById('dayEnd').value.length>0 && document.getElementById('dayEnd').value < value) {
+                alert('Day Start can\'t be < Day End'); 
+                value=document.getElementById('dayEnd').value
+              }
+            ">
+    </label>
+    <label>day end:
+      <input id="dayEnd" [(ngModel)]="apiData.dayEnd" placeholder="insert day end"
+             type="number"
+             oninput="
+              if(value > 6) {
+                alert('Day exceeds day n. 6'); 
+                value=6
+              }
+              if(value < 0) {
+                alert('Day can\'t be < 0!'); 
+                value=0
+              }
+              if(document.getElementById('dayStart').value.length>0 && document.getElementById('dayStart').value > value) {
+                alert('Day Start can\'t be < Day End');
+                value=document.getElementById('dayStart').value
+              }
+             ">
+    </label>
+</div>

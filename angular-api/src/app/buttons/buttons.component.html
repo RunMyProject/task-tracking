@@ -1,0 +1,22 @@
+<div style="padding-top: 20px; padding-bottom: 20px;">
+    <button class="load" (click)="buttonsService.load()">[ LOAD ]</button>
+    <span style="padding-left: 200px;">&nbsp;</span>
+    <button class="add" (click)="buttonsService.add()">[ ADD ]</button>
+    <span style="padding-left: 200px;">&nbsp;</span>
+    <button class="clear" (click)="buttonsService.clear()">[ CLEAR ]</button>
+    <span style="padding-left: 200px;">&nbsp;</span>
+    <button class="save" (click)="buttonsService.save()">[ SAVE ]</button>
+</div>
+<div class="chart-wrapper">
+    <ul class="chart-values">
+      <li *ngFor='let day of weeks'>{{day}}</li>
+    </ul>
+    <ul class="chart-bars" *ngIf="buttonsService.tasks.length">
+        <task-color *ngFor='let task of buttonsService.tasks'
+            task="{{task.task | MyPipe}}"
+            task id="{{task.id}}"
+            color="{{task.color}}"
+            dayStart={{task.dayStart}}
+            dayEnd={{task.dayEnd}}></task-color>
+    </ul>
+</div>
