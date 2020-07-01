@@ -13,12 +13,12 @@ When the Week is still open, other Tasks can be added.
 This is a demo to see how an Angular Application views a Dotnet Application.
 
 [[initial]]
-== Task Tracking Description
+== Task-Tracking Description
 
-Task-tracking is a project based on Angular/.NET to process the managing a task through its life cycle.
+Task-Tracking is a project based on Angular/.NET to process the managing a task through its life cycle.
 It involves planning, tracking, and reporting.
 
-Task tracking can help either individual achieve goals, or groups of individuals collaborate and share knowledge for the accomplishment of collective goals.
+Task-Tracking can help either individual achieve goals, or groups of individuals collaborate and share knowledge for the accomplishment of collective goals.
 
 
 [[initial]]
