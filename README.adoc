@@ -107,6 +107,7 @@ The dashboard consists of three main components, a service for invoking the DotN
 
 In Angular the dynamic coloring of the Task occurs through a "Color Queue Manager" called "QueueColor<T>".
 In QueueColor<T> we have four main operations:
+
 - next(): Node<T>, to retrieve the next element in a circular queue;
 - enqueue(data: T): void, to inject a new color;
 - dequeue(): T, to remove an old color;
@@ -120,6 +121,7 @@ Its function is to process a string and return it with an expression enclosed by
 ==== Angular Model and Service description
 
 A Service called "ButtonsService" is responsible for handling incoming and outgoing DotNet API calls through the interface model called "ApiDataInterface":
+
 - id: unique identifier to retrieve the data from DB;
 - task: the name of the Task to assign;
 - color: the color of the Task;
@@ -127,6 +129,7 @@ A Service called "ButtonsService" is responsible for handling incoming and outgo
 - dayEnd: is a number that goes from 0 to 6, corresponds to the days of the week. This number cannot be less than the start date.
 
 The operators of "ButtonsService":
+
 - initColors(): the method initializes the color queue (it is invoked by the constructor);
 - add(): the method adds a new Task in memory;
 - clear(): the method cleans the weekly plan;
