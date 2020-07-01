@@ -83,11 +83,19 @@ if you have problems to build, I suggest you to clean all Docker images:
 
 [[initial]]
 === Screenshot
+
+the images are running in docker desktop
+
 image::images/docker_desktop.png[]
+
+the Angular App that manages the tasks
+
+image::images/tasks.png[]
 
 == Architecture description
 
 The Architecture is based on two main layers:
+
 - 1) Angular App for Front End (FE) to manage the dashboard in a Single Page Application (SPA);
 - 2) Dotnet Core App for Back End (BE) to manage the REST Microservices (API);
 
